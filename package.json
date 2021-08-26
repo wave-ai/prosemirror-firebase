@@ -1,14 +1,10 @@
 {
-  "name": "prosemirror-firebase",
+  "name": "@meetshepherd/prosemirror-firebase",
   "version": "0.0.1",
   "description": "ProseMirror + Firebase",
   "main": "dist/index.js",
   "scripts": {
     "build": "rm -rf dist; mkdir dist; rollup src/index.js -f cjs | buble -y dangerousForOf -o dist/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/meethshepherd/prosemirror-firebase.git"
   },
   "author": "xylk",
   "license": "MIT",
@@ -24,6 +20,6 @@
     "rollup": "^0.41.4"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/meetshepherd"
+    "registry": "https://npm.pkg.github.com/"
   }
 }
