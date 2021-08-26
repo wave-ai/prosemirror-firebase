@@ -8,19 +8,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xylk/prosemirror-firebase.git"
+    "url": "git+https://github.com/meethshepherd/prosemirror-firebase.git"
   },
   "author": "xylk",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/xylk/prosemirror-firebase/issues"
+    "url": "https://github.com/meethshepherd/prosemirror-firebase/issues"
   },
-  "homepage": "https://github.com/xylk/prosemirror-firebase#readme",
+  "homepage": "https://github.com/meethshepherd/prosemirror-firebase#readme",
   "dependencies": {
     "prosemirror-compress": "0.0.1"
   },
   "devDependencies": {
     "buble": "^0.15.2",
     "rollup": "^0.41.4"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/meetshepherd"
   }
 }
