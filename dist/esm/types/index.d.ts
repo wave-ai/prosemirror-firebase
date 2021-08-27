@@ -28,8 +28,8 @@ interface ConstructorParameters {
         updateCollab: UpdateCollab;
         selections?: any;
     }) => EditorView;
-    clientID: string;
-    progress: (level: number) => any;
+    clientID?: string;
+    progress?: (level: number) => any;
 }
 export declare class FirebaseEditor {
     changesRef: any;

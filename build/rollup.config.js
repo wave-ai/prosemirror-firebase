@@ -17,22 +17,6 @@ const BASE = {
     }
 };
 
-const UMD = {
-    ...BASE,
-    output: {
-        compact: true,
-        format: 'umd',
-        name: 'FirebaseEditor',
-        exports: 'auto',
-        file: 'dist/index.umd.js'
-    },
-    plugins: [
-        replace(BASE.plugins.replace),
-        typescript(),
-        terser(),
-    ],
-};
-
 const ESM = {
     ...BASE,
     output: {
@@ -67,4 +51,4 @@ const CJS = {
     ],
 }
 
-export default [ ESM, UMD, CJS ];
+export default [ ESM, CJS ];

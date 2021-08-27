@@ -1,13 +1,14 @@
 {
   "name": "@meetshepherd/prosemirror-firebase",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "ProseMirror + Firebase",
-  "main": "dist/index.umd.js",
+  "main": "dist/esm/index.js",
   "module": "dist/esm/index.js",
   "browser": "dist/index.umd.js",
   "unpkg": "dist/index.umd.js",
   "jsdelivr": "dist/index.umd.js",
   "types": "dist/esm/types/index.d.ts",
+  "files": ["dist"],
   "scripts": {
     "lint": "./node_modules/.bin/eslint -c .eslintrc.js src/**/*",
     "lint:fix": "./node_modules/.bin/eslint -c .eslintrc.js src/**/* --fix",
