@@ -31,6 +31,8 @@ const ESM = {
             declaration: true,
             declarationDir: 'dist/esm/types',
             rootDir: 'src/',
+            lib: ["es5", "es6", "dom"],
+            target: "es5",
         }),
     ],
 };
@@ -46,7 +48,10 @@ const CJS = {
     },
     plugins: [
         replace(BASE.plugins.replace),
-        typescript(),
+        typescript({
+            lib: ["es5", "es6", "dom"],
+            target: "es5",
+        }),
         terser(),
     ],
 }
