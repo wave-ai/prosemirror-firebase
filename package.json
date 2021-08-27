@@ -1,6 +1,6 @@
 {
   "name": "@meetshepherd/prosemirror-firebase",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "ProseMirror + Firebase",
   "main": "dist/index.umd.js",
   "module": "dist/esm/index.js",

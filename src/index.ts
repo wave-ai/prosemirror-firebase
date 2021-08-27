@@ -51,8 +51,8 @@ interface ConstructorParameters {
     stateConfig: StateConfig,
     updateCollab: UpdateCollab,
     selections?: any }) => EditorView;
-  clientID: string;
-  progress: (level: number) => any;
+  clientID?: string;
+  progress?: (level: number) => any;
 }
 
 export class FirebaseEditor {
