@@ -2,9 +2,17 @@
   "name": "@meetshepherd/prosemirror-firebase",
   "version": "0.0.1",
   "description": "ProseMirror + Firebase",
-  "main": "dist/index.js",
+  "main": "dist/index.umd.js",
+  "module": "dist/esm/index.js",
+  "browser": "dist/index.umd.js",
+  "unpkg": "dist/index.umd.js",
+  "jsdelivr": "dist/index.umd.js",
+  "types": "dist/esm/types/index.d.ts",
   "scripts": {
-    "build": "rm -rf dist; mkdir dist; rollup src/index.js -f cjs | buble -y dangerousForOf -o dist/index.js"
+    "lint": "./node_modules/.bin/eslint -c .eslintrc.js src/**/*",
+    "lint:fix": "./node_modules/.bin/eslint -c .eslintrc.js src/**/* --fix",
+    "build": "cross-env NODE_ENV=production rollup -c build/rollup.config.js -m",
+    "watch": "rollup -c build/rollup.config.js -w"
   },
   "author": "xylk",
   "license": "MIT",
@@ -13,13 +21,41 @@
   },
   "homepage": "https://github.com/meethshepherd/prosemirror-firebase#readme",
   "dependencies": {
-    "prosemirror-compress": "0.0.1"
+    "prosemirror-compress": "0.0.2"
   },
   "devDependencies": {
-    "buble": "^0.15.2",
-    "rollup": "^0.41.4"
+    "@rollup/plugin-eslint": "^8.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@rollup/plugin-replace": "^3.0.0",
+    "@rollup/plugin-typescript": "^8.2.5",
+    "@types/jest": "^26.0.24",
+    "@types/prosemirror-collab": "^1.1.2",
+    "@types/prosemirror-model": "^1.13.2",
+    "@types/prosemirror-state": "^1.2.7",
+    "@types/prosemirror-transform": "^1.1.4",
+    "@types/prosemirror-view": "^1.18.0",
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-plugin-import": "^2.24.0",
+    "husky": "^7.0.1",
+    "jest": "^27.0.6",
+    "lint-staged": "^11.1.2",
+    "minimist": "^1.2.5",
+    "rollup-plugin-terser": "^7.0.2",
+    "ts-jest": "^27.0.4"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "peerDependencies": {
+    "firebase": "^8.0.0",
+    "prosemirror-collab": "^1.2.2",
+    "prosemirror-model": "^1.14.3",
+    "prosemirror-state": "^1.3.4",
+    "prosemirror-transform": "^1.3.2",
+    "prosemirror-view": "^1.19.3"
   }
 }
