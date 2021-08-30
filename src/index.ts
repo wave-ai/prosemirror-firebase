@@ -50,7 +50,7 @@ interface ConstructorParameters {
   view: (arg0: {
     stateConfig: StateConfig,
     updateCollab: UpdateCollab,
-    selections?: any }) => EditorView;
+    selections?: Record<string | number, Selection> }) => EditorView;
   clientID?: string;
   progress?: (level: number) => any;
 }
@@ -65,7 +65,7 @@ export class FirebaseEditor {
   selfSelectionRef: any;
 
   selections: {
-    [K: string]: any;
+    [K: string]: Selection;
   };
 
   view: any;
@@ -86,7 +86,7 @@ export class FirebaseEditor {
     const selfSelectionRef = this.selfSelectionRef = selectionsRef.child(selfClientID);
     selfSelectionRef.onDisconnect().remove();
     const selections: {
-      [K: string]: any;
+      [K: string]: Selection;
     } = this.selections = {};
     const selfChanges: {
       [K: number]: any;
