@@ -26,7 +26,7 @@ interface ConstructorParameters {
     view: (arg0: {
         stateConfig: StateConfig;
         updateCollab: UpdateCollab;
-        selections?: any;
+        selections?: Record<string | number, Selection>;
     }) => EditorView;
     clientID?: string;
     progress?: (level: number) => any;
@@ -37,7 +37,7 @@ export declare class FirebaseEditor {
     selectionsRef: any;
     selfSelectionRef: any;
     selections: {
-        [K: string]: any;
+        [K: string]: Selection;
     };
     view: any;
     constructor({ firebaseRef, stateConfig, view: constructView, clientID: selfClientID, progress, }: ConstructorParameters);
