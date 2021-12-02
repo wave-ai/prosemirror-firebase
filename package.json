@@ -1,6 +1,6 @@
 {
-  "name": "@meetshepherd/prosemirror-firebase",
-  "version": "0.1.6",
+  "name": "@wave-ai/prosemirror-firebase",
+  "version": "0.1.7",
   "description": "ProseMirror + Firebase",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
@@ -8,7 +8,9 @@
   "unpkg": "dist/index.umd.js",
   "jsdelivr": "dist/index.umd.js",
   "types": "dist/esm/types/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "lint": "./node_modules/.bin/eslint -c .eslintrc.js src/**/*",
     "lint:fix": "./node_modules/.bin/eslint -c .eslintrc.js src/**/* --fix",
@@ -18,9 +20,9 @@
   "author": "xylk",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/meethshepherd/prosemirror-firebase/issues"
+    "url": "https://github.com/wave-ai/prosemirror-firebase/issues"
   },
-  "homepage": "https://github.com/meethshepherd/prosemirror-firebase#readme",
+  "homepage": "https://github.com/wave-ai/prosemirror-firebase#readme",
   "dependencies": {
     "prosemirror-compress": "0.0.2"
   },
@@ -32,9 +34,9 @@
     "@types/jest": "^26.0.24",
     "@types/prosemirror-collab": "^1.1.2",
     "@types/prosemirror-model": "^1.13.2",
-    "@types/prosemirror-state": "^1.2.7",
+    "@types/prosemirror-state": "^1.2.8",
     "@types/prosemirror-transform": "^1.1.4",
-    "@types/prosemirror-view": "^1.18.0",
+    "@types/prosemirror-view": "^1.19.2",
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "@typescript-eslint/parser": "^4.29.1",
     "cross-env": "^7.0.3",
@@ -45,18 +47,21 @@
     "jest": "^27.0.6",
     "lint-staged": "^11.1.2",
     "minimist": "^1.2.5",
+    "rollup": "^2.60.2",
     "rollup-plugin-terser": "^7.0.2",
-    "ts-jest": "^27.0.4"
+    "ts-jest": "^27.0.4",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.2"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
   "peerDependencies": {
-    "firebase": "^8.0.0",
+    "firebase": "^8.2.4",
     "prosemirror-collab": "^1.2.2",
-    "prosemirror-model": "^1.14.3",
+    "prosemirror-model": "^1.15.0",
     "prosemirror-state": "^1.3.4",
-    "prosemirror-transform": "^1.3.2",
-    "prosemirror-view": "^1.19.3"
+    "prosemirror-transform": "^1.3.3",
+    "prosemirror-view": "^1.23.3"
   }
 }

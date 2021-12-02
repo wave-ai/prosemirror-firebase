@@ -148,7 +148,7 @@ var FirebaseEditor = /** @class */ (function () {
                 if (changes) {
                     var steps = [];
                     var stepClientIDs = [];
-                    var placeholderClientId = "_oldClient" + Math.random();
+                    var placeholderClientId = "_oldClient".concat(Math.random());
                     var keys = Object.keys(changes).map(Number);
                     latestKey = Math.max.apply(Math, keys);
                     for (var _i = 0, keys_1 = keys; _i < keys_1.length; _i++) {
